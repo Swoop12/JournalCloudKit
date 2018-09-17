@@ -8,19 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		F73AC950215006580012A8DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73AC94F215006580012A8DE /* AppDelegate.swift */; };
-		F73AC952215006580012A8DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73AC951215006580012A8DE /* ViewController.swift */; };
 		F73AC955215006580012A8DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F73AC953215006580012A8DE /* Main.storyboard */; };
 		F73AC957215006580012A8DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F73AC956215006580012A8DE /* Assets.xcassets */; };
 		F73AC95A215006580012A8DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F73AC958215006580012A8DE /* LaunchScreen.storyboard */; };
 		F73AC962215006D00012A8DE /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73AC961215006D00012A8DE /* Entry.swift */; };
 		F73AC966215008510012A8DE /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F73AC965215008510012A8DE /* CloudKit.framework */; };
 		F73AC968215012020012A8DE /* EntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73AC967215012020012A8DE /* EntryController.swift */; };
+		F73AC96A215024E00012A8DE /* EntryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73AC969215024E00012A8DE /* EntryDetailViewController.swift */; };
+		F73AC96C215024EB0012A8DE /* EntriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73AC96B215024EB0012A8DE /* EntriesTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F73AC94C215006580012A8DE /* CloudKitJournal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudKitJournal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F73AC94F215006580012A8DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F73AC951215006580012A8DE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F73AC954215006580012A8DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F73AC956215006580012A8DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F73AC959215006580012A8DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -29,6 +29,8 @@
 		F73AC9632150084D0012A8DE /* CloudKitJournal.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CloudKitJournal.entitlements; sourceTree = "<group>"; };
 		F73AC965215008510012A8DE /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		F73AC967215012020012A8DE /* EntryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryController.swift; sourceTree = "<group>"; };
+		F73AC969215024E00012A8DE /* EntryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryDetailViewController.swift; sourceTree = "<group>"; };
+		F73AC96B215024EB0012A8DE /* EntriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntriesTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,14 +66,10 @@
 			isa = PBXGroup;
 			children = (
 				F73AC9632150084D0012A8DE /* CloudKitJournal.entitlements */,
-				F73AC94F215006580012A8DE /* AppDelegate.swift */,
-				F73AC951215006580012A8DE /* ViewController.swift */,
-				F73AC953215006580012A8DE /* Main.storyboard */,
-				F73AC956215006580012A8DE /* Assets.xcassets */,
-				F73AC958215006580012A8DE /* LaunchScreen.storyboard */,
-				F73AC95B215006580012A8DE /* Info.plist */,
-				F73AC961215006D00012A8DE /* Entry.swift */,
-				F73AC967215012020012A8DE /* EntryController.swift */,
+				F73AC96D21503E270012A8DE /* Resources */,
+				F73AC96E21503E2E0012A8DE /* Models */,
+				F73AC96F21503E340012A8DE /* ModelControllers */,
+				F73AC97021503E410012A8DE /* ViewControllers */,
 			);
 			path = CloudKitJournal;
 			sourceTree = "<group>";
@@ -82,6 +80,43 @@
 				F73AC965215008510012A8DE /* CloudKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F73AC96D21503E270012A8DE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F73AC94F215006580012A8DE /* AppDelegate.swift */,
+				F73AC953215006580012A8DE /* Main.storyboard */,
+				F73AC956215006580012A8DE /* Assets.xcassets */,
+				F73AC958215006580012A8DE /* LaunchScreen.storyboard */,
+				F73AC95B215006580012A8DE /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F73AC96E21503E2E0012A8DE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F73AC961215006D00012A8DE /* Entry.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F73AC96F21503E340012A8DE /* ModelControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F73AC967215012020012A8DE /* EntryController.swift */,
+			);
+			path = ModelControllers;
+			sourceTree = "<group>";
+		};
+		F73AC97021503E410012A8DE /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F73AC969215024E00012A8DE /* EntryDetailViewController.swift */,
+				F73AC96B215024EB0012A8DE /* EntriesTableViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,9 +198,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F73AC96C215024EB0012A8DE /* EntriesTableViewController.swift in Sources */,
 				F73AC962215006D00012A8DE /* Entry.swift in Sources */,
-				F73AC952215006580012A8DE /* ViewController.swift in Sources */,
 				F73AC968215012020012A8DE /* EntryController.swift in Sources */,
+				F73AC96A215024E00012A8DE /* EntryDetailViewController.swift in Sources */,
 				F73AC950215006580012A8DE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

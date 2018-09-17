@@ -9,7 +9,7 @@
 import Foundation
 import CloudKit
 
-fileprivate struct Constants{
+struct Constants{
     
     static let recordKey = "Entry"
     static let titleKey = "Title"
@@ -22,7 +22,7 @@ class Entry{
     var body: String
     var ckRecordID: CKRecord.ID
     
-    init(title: String, body: String, ckRecordID: CKRecord.ID){
+    init(title: String, body: String, ckRecordID: CKRecord.ID = CKRecord.ID(recordName: UUID().uuidString)){
         self.title = title
         self.body = body
         self.ckRecordID = ckRecordID
@@ -37,6 +37,13 @@ class Entry{
     
     }
     
+}
+
+extension Entry: Equatable{
+    
+    static func ==(lhs: Entry, rhs: Entry) -> Bool{
+        return lhs.title == rhs.title && lhs.body == rhs.body
+    }
 }
 
 extension CKRecord{
